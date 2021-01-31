@@ -34,7 +34,6 @@ jobs:
 
     - name: Build wheels
       run: |
-        cd miniupnpc
         python -m cibuildwheel --output-dir dist
       env:
         # build python 3.7 and 3.8
