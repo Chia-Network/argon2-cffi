@@ -14,12 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        fetch-depth: 0
-        # we need fetch-depth 0 so setuptools_scm can resolve tags
-
-    - name: Checkout submodules
-      uses: textbook/git-checkout-submodule-action@v2
-      with:
         remote: true
 
     - uses: actions/setup-python@v2
