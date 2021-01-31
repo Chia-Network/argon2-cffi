@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: False
       matrix:
-        os: [macos-latest, ubuntu-latest]
+        os: [ubuntu-latest]
 
     steps:
     - name: Checkout repository
@@ -44,6 +44,7 @@ jobs:
           python -m pip install --upgrade pip &&
           python -m pip install --upgrade cffi
         CIBW_ARCHS_LINUX: x86_64 aarch64
+        CIBW_TEST_REQUIRES: tox
 #        CIBW_BEFORE_ALL_LINUX: >
 
     - name: Upload artifacts
